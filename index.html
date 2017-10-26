@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover In/Out</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+                var temp="temp";
+                var temp1="temp";
+            $("img").hover(function () {
+                
+                temp= $("img").attr("data-alt-src");
+                temp1= $("img").attr("src");
+                $(this).attr("src", temp);
+
+            }, function () {
+                $(this).attr("src", temp1);
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <article>
+        <img src="images/img1.jpg" data-alt-src="images/img2.jpg" alt="#">
+        <h1>1</h1>
+    </article>
+
+    <article>
+        <img src="images/img1.jpg" data-alt-src="images/img2.jpg" alt="#">
+        <h1>2</h1>
+    </article>
+
+    <article>
+        <img src="images/img1.jpg" data-alt-src="images/img2.jpg" alt="#">
+        <h1>3</h1>
+    </article>
+
+    <article>
+        <img src="images/img1.jpg" data-alt-src="images/img2.jpg" alt="#">
+        <h1>4</h1>
+    </article>
+</body>
+</html>
